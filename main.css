@@ -123,3 +123,24 @@ span {
 	display: block;
     	margin-left: 100px;
 }
+
+
+#container2 {
+	position: fixed;
+	width: 180px;
+	margin-left: 8%;
+	margin-top: 60px;
+	}
+
+
+#profiles {
+	position: relative;
+}
+
+
+.profile-box {
+	background-image: url("images/profile-box.png");
+	background-repeat: no-repeat;
+	padding-left: 17px;
+	padding-bottom: 20px;
+	float: right;
