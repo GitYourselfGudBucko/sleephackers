@@ -8,6 +8,9 @@
 }
 
 body {
+	font-family: Trench;
+	color: #e9f7fe;
+	font-size: 18px;
 	background-image: url("images/main-bg.gif");
 	background-repeat: repeat;
     	background-attachment: fixed;
@@ -17,6 +20,22 @@ body {
 	overflow: auto;
 }
 
+span {
+	color: #cbcbcb;
+}
+
+.master {
+	color: #acc5de;
+
+}
+
+
+
+
+#page-number {
+	color: #acc5de;
+	font-size: 2em;
+}
 
 #top-bar {
 	background-image: url("images/top-bar-bg.gif");
@@ -57,16 +76,33 @@ body {
 
 }
 
-#info {
-	padding: 0px;
+#info-bar {
+	margin-top: 30px;
+	margin-right: 20px;
 }
 
 
+#info {
+	
+}
+
+#navigation {
+	margin-left: 100px;
+	padding: 0px;
+}
+
+.gradient {
+	background: #2e3133;
+   	background: -webkit-linear-gradient(#17191b, #3e3f41); /* For Safari 5.1 to 6.0 */
+   	background: -o-linear-gradient(#17191b, #3e3f41); /* For Opera 11.1 to 12.0 */
+   	background: -moz-linear-gradient(#17191b, #3e3f41); /* For Firefox 3.6 to 15 */
+   	background: linear-gradient(#17191b, #3e3f41); /* Standard syntax */
+}
 
 #page {
-	width: 600px;
+	width: 700px;
     	display: block;
-    	margin-left: 180px;
+    	margin-left: 100px;
 }
 
 
@@ -85,6 +121,5 @@ body {
 
 #footer-image {
 	display: block;
-    	margin-left: auto;
-	margin-right: auto;
+    	margin-left: 100px;
 }
