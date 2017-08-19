@@ -1,12 +1,5 @@
 /* sleepHackersAesthetique */
 
-
-
-@font-face {
-    font-family: Trench;
-    src: url(fonts/trench100free.otf);
-}
-
 body {
 	background-image: url("images/main-bg.gif");
 	background-repeat: repeat;
@@ -39,52 +32,42 @@ body {
 }
 
 
-
-#container {
-	position: relative;
-	margin-left: 15%;
-	width: 1021px;
-	padding: 0px 0px 0px 0px;
-
-}
-
-
 #main-bar {
 	background-color: #010101;
 	position: absolute;
 	width:  821px;
+	height: 100%;
+	top: 26px;
+	margin-left:15%;
 	padding: 0px 0px 0px 0px;
 
 }
 
-#info {
-	padding: 0px;
-}
-
-
-
-#page {
-	width: 600px;
-    	display: block;
-    	margin-left: 180px;
-}
-
-
-#side-bar {
-	position: absolute;
-	right: 0px;
-}
-
-
 #side-image {
 	width: 200px;
-}
-#footer {
-	padding-bottom: 20px;
+	top: 26px;
+	margin-left: 821px;
+	padding: 0px 0px 0px 0px;
+	
 }
 
-#footer-image {
+#side {
+	width: 160px;
+}
+
+
+#profiles {
+	margin-left: 12%;
+	margin-top: 100px;
+	position: fixed;
+}
+
+
+.profile-box {
+	background-image: url("images/profile-box.png");
+	background-repeat: no-repeat;
 	display: block;
-    	margin-left: auto;
-	margin-right: auto;
+	padding-left: 17px;
+	padding-bottom: 20px;
+
 }
