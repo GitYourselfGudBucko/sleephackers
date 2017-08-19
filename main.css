@@ -9,7 +9,7 @@
 
 body {
 	font-family: Trench;
-	color: #e9f7fe;
+	color: #a8d800;
 	font-size: 18px;
 	background-image: url("images/main-bg.gif");
 	background-repeat: repeat;
@@ -21,11 +21,11 @@ body {
 }
 
 span {
-	color: #cbcbcb;
+	color: #ffffff;
 }
 
 .master {
-	color: #acc5de;
+	color: #a8d800;
 
 }
 
@@ -33,7 +33,7 @@ span {
 
 
 #page-number {
-	color: #acc5de;
+	color: #a8d800;
 	font-size: 2em;
 }
 
@@ -144,3 +144,4 @@ span {
 	padding-left: 17px;
 	padding-bottom: 20px;
 	float: right;
+}
