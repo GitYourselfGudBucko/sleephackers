@@ -8,17 +8,19 @@ $(document).ready(function() {
 
 // set up an array of comic images
 var imgs = [
-	'images/Page-02.jpg',
-   	'images/Page-01.jpg',
+	'images/Page-01.jpg',
+   	'images/Page-02.jpg',
+	'images/Page-03.jpg',
+	'images/Page-04.jpg'
  ],
     // initialize current to 0
     current = 0;
 
-// define a function that returns the next item in the imgs array, 
+// define a function that returns the next item in the imgs array,
 // or the first if we're already at the last one
 function next() {
     current++;
-    if (current >= imgs.length) current = 0;
+    if (current == imgs.length) current = 0;
     return imgs[current];
 }
 
@@ -47,9 +49,21 @@ $('#next').on('click', function(){
     comic.attr('src', next());
 });
 
+// my alpha and omega
+
+function alpha() {
+	return imgs[0];
+}
+
+
+$('#alpha').on('click', function(){
+    comic.attr('src', alpha());
+});
+
+
 
 function omega() {
-	return imgs[0];
+	return imgs.slice(-1)[0];
 }
 
 
@@ -57,15 +71,21 @@ $('#omega').on('click', function(){
     comic.attr('src', omega());
 });
 
+// scrolling animations
 
 
-function alpha() {
-	return imgs.slice(-1)[0];
-}
-
-
-$('#alpha').on('click', function(){
-    comic.attr('src', alpha());
+/*$('#nav-bar').click(function() {
+  $(this).animate({
+    top: "+=200",
+    }, 5000, function() {
+    // Animation complete.
+  });
 });
+*/
+
+$(window).scroll(function(){
+				 $("#nav-bar").stop().animate({"marginTop": ($(window).scrollTop()) + "px"}, "slow" );
+			 });
+
 
 });
