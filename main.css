@@ -34,13 +34,10 @@ span {
 	font-size: 2em;
 }
 
-#deplorable {
-	margin-bottom: 50px;
-}
 
 .tooltip {
     position: relative;
-    
+    background-color: #000000;
 }
 
 .tooltip .tooltiptext {
@@ -57,7 +54,7 @@ span {
     	padding: 5px 0;
 	position: absolute;
 	top: 100%;
-    	left: 50%; 
+    	left: 50%;
     	margin-left: -60px;
     	z-index: 1;
 }
@@ -111,17 +108,24 @@ span {
 }
 
 
-#navigation {
+#header {
 	padding: 0px;
 	margin-left: 100px;
 }
 
+#nav-bar {
+	padding: 0px;
+	margin-left: 100px;
+  position: fixed;
+}
+
+
 .gradient {
 	background: #2e3133;
-   	background: -webkit-linear-gradient(#17191b, #3e3f41); /* For Safari 5.1 to 6.0 */
-   	background: -o-linear-gradient(#17191b, #3e3f41); /* For Opera 11.1 to 12.0 */
-   	background: -moz-linear-gradient(#17191b, #3e3f41); /* For Firefox 3.6 to 15 */
-   	background: linear-gradient(#17191b, #3e3f41); /* Standard syntax */
+  background: -webkit-linear-gradient(#17191b, #3e3f41); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#17191b, #3e3f41); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#17191b, #3e3f41); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#17191b, #3e3f41); /* Standard syntax */
 }
 
 #page {
