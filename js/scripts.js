@@ -50,7 +50,6 @@ $('#next').on('click', function(){
 });
 
 // my alpha and omega
-
 function alpha() {
 	return imgs[0];
 }
