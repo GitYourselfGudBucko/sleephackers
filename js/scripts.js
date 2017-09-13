@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 // set up an array of comic images
 var imgs = [
-	'images/Page-01.jpg',
+	  'images/Page-01.jpg',
    	'images/Page-02.jpg',
     'images/Page-03.jpg',
     'images/Page-04.jpg'
@@ -35,26 +35,26 @@ function prev() {
 // my alpha and omega
 function alpha() {
     current = 0;
-	updateImage(current);
+	  updateImage(current);
 }
 
 function omega() {
     current = imgs.length - 1;
-	updateImage(current);
+	  updateImage(current);
 }
 
 
 function updateImage(index) {
     if (current == 0) {
-        $("#prev").hide();
+        $(".prev").hide();
     } else {
-        $("#prev").show();
+        $(".prev").show();
     }
 
     if (current == imgs.length - 1) {
-        $("#next").hide();
+        $(".next").hide();
     } else {
-        $("#next").show();
+        $(".next").show();
     }
 
     comic.attr('src', imgs[index]);
@@ -62,22 +62,17 @@ function updateImage(index) {
 
 
 // define the first image in terms of a jquery object
-var comic = $('<img/>').attr('src', imgs[0]);
-
+var comic = $('<img/>');
 // append to DOM
 $('#page').append(comic);
-
+updateImage(0);
 // click the prev button, get the previous image
-$('#prev').on('click', prev);
+$('.prev').on('click', prev);
 // click the next button, get the next image
-$('#next').on('click', next);
-$('#alpha').on('click', alpha);
-$('#omega').on('click', omega);
+$('.next').on('click', next);
+$('.alpha').on('click', alpha);
+$('.omega').on('click', omega);
 $('#page').on('click', next);
-
-
-
-
 
 
 
@@ -90,8 +85,8 @@ $('#page').on('click', next);
 //     function() {
 //         $(this).animate({
 //             top: "+=200",
-//         }, 
-//         5000, 
+//         },
+//         5000,
 //         function() {
 //             // Animation complete.
 //         });

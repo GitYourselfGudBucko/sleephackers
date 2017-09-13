@@ -17,6 +17,7 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow: auto;
+  margin: 0px;
 }
 
 span {
@@ -87,7 +88,8 @@ span {
 
 #container {
 	position: relative;
-	margin-left: 15%;
+	margin-left: auto;
+  margin-right: auto;
 	width: 1021px;
 	padding: 0px 0px 0px 0px;
 
@@ -116,8 +118,8 @@ span {
 #nav-bar {
 	padding: 0px;
 	margin-left: 100px;
-  position: fixed;
-}
+  position: absolute;
+  }
 
 
 .gradient {
@@ -144,6 +146,7 @@ span {
 #side-image {
 	width: 200px;
 }
+
 #footer {
 	padding-bottom: 20px;
 }
@@ -154,16 +157,11 @@ span {
 }
 
 
-#container2 {
-	position: fixed;
-	width: 180px;
-	margin-left: 8%;
-	margin-top: 40px;
-	}
-
-
 #profiles {
-	position: relative;
+	margin-left: auto;
+  margin-right: auto;
+  width: 1220px;
+  height: 400px;
 }
 
 
@@ -172,5 +170,5 @@ span {
 	background-repeat: no-repeat;
 	padding-left: 17px;
 	padding-bottom: 20px;
-	float: right;
+  width: 160px;
 }
