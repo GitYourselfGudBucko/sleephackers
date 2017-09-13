@@ -1,16 +1,16 @@
 $(document).ready(function() {
-	$('#top').css('display', 'none');
-	$('#top').fadeIn(2000);
-	$('#side-image').css('display', 'none');
-	$('#side-image').fadeIn(2000);
-	$('.profile-box').css('display', 'none');
-	$('.profile-box').fadeIn(2000);
+    $('#top').css('display', 'none');
+    $('#top').fadeIn(2000);
+    $('#side-image').css('display', 'none');
+    $('#side-image').fadeIn(2000);
+    $('.profile-box').css('display', 'none');
+    $('.profile-box').fadeIn(2000);
 
 
     // set up an array of comic images
     var imgs = [
-    	'images/volumes/vol-01/issue-01/page-01.jpg',
-       	'images/volumes/vol-01/issue-01/page-02.jpg',
+        'images/volumes/vol-01/issue-01/page-01.jpg',
+        'images/volumes/vol-01/issue-01/page-02.jpg',
         'images/volumes/vol-01/issue-01/page-03.jpg',
         'images/volumes/vol-01/issue-01/page-04.jpg'
      ],
@@ -69,12 +69,12 @@ $(document).ready(function() {
     // my alpha and omega
     function alpha() {
         current_image = 0;
-    	updateImage(current_image);
+        updateImage(current_image);
     }
 
     function omega() {
         current_image = imgs.length - 1;
-    	updateImage(current_image);
+        updateImage(current_image);
     }
 
     function updateImage(index) {
@@ -128,7 +128,7 @@ $(document).ready(function() {
 
     // $(window).scroll(function() {
     //     console.log($(window).scrollTop());
-    // 	   $("#nav-bar").stop().animate({"marginTop": ($(window).scrollTop()) + "px"}, "slow" );
+    //     $("#nav-bar").stop().animate({"marginTop": ($(window).scrollTop()) + "px"}, "slow" );
     //     });
 
 
