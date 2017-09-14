@@ -8,7 +8,7 @@
 body {
     font-family: Trench;
     color: #a8d800;
-    font-size: 16px;
+    font-size: 18px;
     background-image: url("images/main-bg.gif");
     background-repeat: repeat;
     background-color: #010101;
@@ -20,23 +20,81 @@ body {
 
 span {
     color: #ffffff;
-}
-
-.master {
-    color: #a8d800;
 
 }
 
-
-#page-number {
+#volume_number {
     color: #a8d800;
-    font-size: 2em;
+    font-size: 18px;
+}
+
+#issue_number {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+
+#page_number {
+    color: #a8d800;
+    font-size: 22px;
+}
+
+#volume_number:hover {
+  color: #000000;
+}
+
+#issue_number:hover {
+  color: #000000;
+}
+
+#page_number:hover {
+  color: #000000;
+}
+
+#volume-dropdown {
+  color: #a8d800;
+  font-size: 18px;
+  position: absolute;
+  display: none;
+  text-align: left;
+  margin-left: 160px;
+  margin-top: -20px;
+  width: 200px;
+  background: #000000;
+  z-index: 200;
+}
+
+
+#issue-dropdown {
+  color: #a8d800;
+  font-size: 18px;
+  position: absolute;
+  display: none;
+  text-align: left;
+  margin-left: 160px;
+  margin-top: -35px;
+  width: 200px;
+  background: #000000;
+  z-index: 201;
+}
+
+
+#page-dropdown {
+  color: #a8d800;
+  font-size: 18px;
+  position: absolute;
+  display: none;
+  text-align: left;
+  margin-left: 160px;
+  margin-top: -23px;
+  width: 80px;
+  background: #000000;
+  z-index: 202;
 }
 
 
 .tooltip {
     position: relative;
-    background-color: #000000;
 }
 
 .tooltip .tooltiptext {
@@ -68,16 +126,14 @@ span {
     position: absolute;
     width: 100%;
     height: 40px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    padding: 0px 0px 0px 0px;
-    display-block;
+    display: block;
     z-index: 100;
 }
 
 #top {
-    margin-left: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 10px;
 
 }
@@ -111,6 +167,7 @@ span {
 #header {
     padding: 0px;
     margin-left: 100px;
+    z-index: 101;
 }
 
 #nav-bar {
@@ -146,7 +203,7 @@ span {
 }
 
 #footer {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 #footer-image {
@@ -154,12 +211,19 @@ span {
     margin-left: 100px;
 }
 
-
-#profiles {
+#container2 {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: 1220px;
-    height: 400px;
+    width: 1200px;
+    padding: 0px 0px 0px 0px;
+
+}
+
+
+#profiles {
+    position: absolute;
+    padding-top: 40px;
 }
 
 
@@ -169,4 +233,22 @@ span {
     padding-left: 17px;
     padding-bottom: 20px;
     width: 160px;
+}
+
+#sol-profile {
+    display: none;
+    background-color: #000000;
+}
+
+#atropa-profile {
+    display: none;
+    background-color: #000000;
+    margin-top: -1px;
+
+}
+
+#rube-profile {
+    display: none;
+    background-color: #000000;
+
 }

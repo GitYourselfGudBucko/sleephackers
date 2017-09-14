@@ -23,15 +23,14 @@
             <table  width="700" id="header">
             <tbody>
                 <tr>
-
-                    <td  height="72"><img src="images/header.jpg" /></td>
+									<td  height="72"><img src="images/header.jpg" /></td>
                     <td  class="gradient" style="text-align: right;">
-                    <span id="volume_number"></span>
-                    <br/>
-                    <span id="issue_number"></span>
-                    <br/>
-                    <span id="page_number"></span>
-                    <br/>
+                    <div id="volume-dropdown-hover"><span id="volume_number"></span></div>
+										<div id="volume-dropdown">v.01 GROUNDING<br />v.02 HACKED<br />v.03 BACK TO THE SWITCHBOARD<br />v.04 EVIL & HARMINE<br />v.05 BROKEN CIRCUIT<br />v.06 THE DREAMLESS<br />v.07 NON-LOCAL QUANTUM<br />v.08 WHEN 8 BECOMES 9</div>
+                    <div id="issue-dropdown-hover"><span id="issue_number"></span></div>
+										<div id="issue-dropdown">.01 enter the metropolis<br />.02 sun zero<br />.03 dead man's coven<br /></div>
+        						<div id="page-dropdown-hover"><span id="page_number"></span></div>
+										<div id="page-dropdown">Page 01<br >Page 02<br >Page 03<br >Page 04<br >Page 05<br >Page 06<br >Page 07<br >Page 08<br ></div>
                     </td>
                 </tr>
             </tbody>
@@ -39,14 +38,14 @@
         <table width="700" id="nav-bar">
             <tbody>
                 <tr>
-                <td class="tooltip" width="35"><img class="alpha" src="images/first.png" /><span class="tooltiptext">the beginning</span></td>
-                <td class="tooltip" width="40"><img class="prev" src="images/prev.png" /><span class="tooltiptext">previous page</span>
+                <td class="tooltip" id="hide-alpha" width="35"><img class="alpha" src="images/first.png" /><span class="tooltiptext">the beginning</span></td>
+                <td class="tooltip" id="hide-prev" width="40"><img class="prev" src="images/prev.png" /><span class="tooltiptext">previous page</span>
                 </td>
-                <td><center>- / +</center>
+                <td><center></center>
                 </td>
-                <td class="tooltip" width="40"><img class="next" src="images/next.png" /><span class="tooltiptext">next page</span>
+                <td class="tooltip" id="hide-next" width="40"><img class="next" src="images/next.png" /><span class="tooltiptext">next page</span>
                 </td>
-                <td class="tooltip" width="35"><img class="omega" src="images/last.png" /><span class="tooltiptext">most recent</span></td>
+                <td class="tooltip" id="hide-omega" width="35"><img class="omega" src="images/last.png" /><span class="tooltiptext">most recent</span></td>
                 </tr>
                 </tbody>
             </table>
@@ -59,21 +58,21 @@
             <table width="700" id="nav-bar">
                 <tbody>
                     <tr>
-                    <td class="tooltip" width="35"><img class="alpha" src="images/first.png" /><span class="tooltiptext">the beginning</span></td>
-                    <td class="tooltip" width="40"><img class="prev" src="images/prev.png" /><span class="tooltiptext">previous page</span>
+                    <td class="tooltip" id="hide-alpha2" width="35"><img class="alpha" src="images/first.png" /><span class="tooltiptext">the beginning</span></td>
+                    <td class="tooltip" id="hide-prev2" width="40"><img class="prev" src="images/prev.png" /><span class="tooltiptext">previous page</span>
                     </td>
-                    <td><center>- / +</center>
+                    <td><center></center>
                     </td>
-                    <td class="tooltip" width="40"><img class="next" src="images/next.png" /><span class="tooltiptext">next page</span>
+                    <td class="tooltip" id="hide-next2" width="40"><img class="next" src="images/next.png" /><span class="tooltiptext">next page</span>
                     </td>
-                    <td class="tooltip" width="35"><img class="omega" src="images/last.png" /><span class="tooltiptext">most recent</span></td>
+                    <td class="tooltip" id="hide-omega2" width="35"><img class="omega" src="images/last.png" /><span class="tooltiptext">most recent</span></td>
                     </tr>
                     </tbody>
                 </table></div>
 
             <br />
             <br />
-            <br />
+
         <div id="footer">
             <img id="footer-image" src="images/footer-logo.png" />
         </div>
@@ -86,23 +85,25 @@
 </div>
 
 
-<div id="profiles">
+<div id="container2">
+	<div id="profiles">
 
     <div style="text-align: right;" class="profile-box">
-        <img src="images/sol.gif" class="profile" />
-<br />deplorable #788829
-</div><br/>
+        <img src="images/sol.gif" class="profile" id="sol" />
+<br />deplorable #788829<div id="sol-profile">name: sol<br />ties: the colonies</div>
+</div>
     <div style="text-align: right;" class="profile-box">
-        <img src="images/atropa.gif" class="profile" />
-<br />deplorable #539
+        <img src="images/atropa.gif" class="profile" id="atropa"/>
+<br />deplorable #539<div id="atropa-profile">name: atropa<br />ties: D.E.R.P.A.,<br />nascentient designs</div>
 
-</div><br />
+</div>
     <div style="text-align: right;" class="profile-box">
-        <img src="images/rube.gif" class="profile" />
-<br />deplorable #29384
+        <img src="images/rube.gif" class="profile" id="rube" />
+<br />deplorable #29384<div id="rube-profile">name: rubella<br />ties: project delta</div>
 
     </div>
 
+	</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
