@@ -1,10 +1,13 @@
 $(document).ready(function() {
-    $('#top').css('display', 'none');
-    $('#top').fadeIn(2000);
-    $('#side-image').css('display', 'none');
-    $('#side-image').fadeIn(2000);
-    $('.profile-box').css('display', 'none');
-    $('.profile-box').fadeIn(2000);
+
+
+    $('#comic').css('display', 'none');
+    $('#comic').fadeIn(2000);
+    $('#footer-image').css('display', 'none');
+    $('#footer-image').fadeIn(4000);
+    $('.nav-bar').css('display', 'none');
+    $('.nav-bar').fadeIn(6000);
+
 
 
     // set up an array of comic images
@@ -43,11 +46,11 @@ $(document).ready(function() {
         var regex = /vol-(\d+)\/issue-(\d+)\/page-(\d+)/;
         url.replace(regex, function(match, p1, p2, p3) {
             current_volume = parseInt(p1) - 1;
-            $("#volume_number").html("v." + p2 + " " + volume_names[current_volume].toUpperCase());
+            $("#volume_number").html("V." + p2);
             current_issue = parseInt(p2) - 1;
-            $("#issue_number").html("." + p2 + " " + issue_names[current_volume][current_issue]);
+            $("#issue_number").html("." + p2);
             current_page = parseInt(p3) - 1;
-            $("#page_number").html("p." + p3);
+            $("#page_number").html("." + p3);
         });
     }
 
@@ -177,37 +180,37 @@ $(document).ready(function() {
 
     $("#twit").on({
      "mouseover" : function() {
-        this.src = 'images/twitter-hover.png';
+        this.src = 'images/twitter-mobile.png';
       },
       "mouseout" : function() {
-        this.src='images/twitter.png';
+        this.src='images/twitter-mobile.png';
       }
     });
 
     $("#gram").on({
      "mouseover" : function() {
-        this.src = 'images/instagram-hover.png';
+        this.src = 'images/instagram-mobile.png';
       },
       "mouseout" : function() {
-        this.src='images/instagram.png';
+        this.src='images/instagram-mobile.png';
       }
     });
 
     $("#in").on({
      "mouseover" : function() {
-        this.src = 'images/linkedin-hover.png';
+        this.src = 'images/linkedin-mobile.png';
       },
       "mouseout" : function() {
-        this.src='images/linkedin.png';
+        this.src='images/linkedin-mobile.png';
       }
     });
 
     $("#mail").on({
      "mouseover" : function() {
-        this.src = 'images/email-hover.png';
+        this.src = 'images/email-mobile.png';
       },
       "mouseout" : function() {
-        this.src='images/email.png';
+        this.src='images/email-mobile.png';
       }
     });
 
