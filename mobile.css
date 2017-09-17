@@ -1,0 +1,149 @@
+/* sleepHackersAesthetique */
+
+@font-face {
+    font-family: Trench;
+    src: url(fonts/trench100free.otf);
+}
+
+
+body {
+    font-family: Trench;
+    color: #a8d800;
+    font-size: 48px;
+    background-color: #000000;
+    background-image:url("images/mobile-bg.gif");
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    margin: 0px;
+    text-align: center;
+}
+
+span {
+    color: #ffffff;
+
+}
+
+#header-container {
+  width: auto;
+}
+
+
+#header {
+  padding: 0px;
+  display: inline-block;
+}
+
+
+#header-nav {
+  float: right;
+
+}
+
+#main-container {
+  display: inline-block;
+}
+
+#volume_number {
+    color: #a8d800;
+    font-size: 2em;
+}
+
+#issue_number {
+    color: #ababab;
+    font-size: 2em;
+}
+
+
+#page_number {
+    color: #ffffff;
+    font-size: 2em;
+  }
+
+#volume_number:hover {
+  color: #000000;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#issue_number:hover {
+  color: #000000;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#page_number:hover {
+  color: #000000;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.volume-number-click {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #000000;
+}
+
+#volume-dropdown {
+  color: #a8d800;
+  font-size: 1em;
+  position: absolute;
+  display: none;
+  text-align: left;
+  width: 600px;
+  margin-left: -275px;
+  background: #000000;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 200;
+}
+
+
+#issue-dropdown {
+  color: #a8d800;
+  font-size: 1em;
+  position: absolute;
+  display: none;
+  text-align: left;
+  margin-left: -150px;
+  width: 330px;
+  background: #000000;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 201;
+}
+
+
+#page-dropdown {
+  color: #a8d800;
+  font-size: 1em;
+  position: absolute;
+  display: none;
+  text-align: left;
+  margin-left: -88px;
+  width: 170px;
+  background: #000000;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 202;
+}
+
+.nav-bar {
+    padding: 0px;
+    width: auto;
+    display: inline-block;
+
+}
+
+
+#footer {
+  margin-top: -50px;
+
+
+}
+
+#footer-image {
+  margin-bottom: -150px;
+
+}
