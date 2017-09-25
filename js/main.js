@@ -2,14 +2,12 @@ $(document).ready(function() {
 
   document.addEventListener('contextmenu', event => event.preventDefault());
 
-
-    $('#comic').css('display', 'none');
-    $('#comic').fadeIn(2000);
-    $('#footer-image').css('display', 'none');
-    $('#footer-image').fadeIn(4000);
-    $('.nav-bar').css('display', 'none');
-    $('.nav-bar').fadeIn(6000);
-
+    $('#top').css('display', 'none');
+    $('#top').fadeIn(2000);
+    $('#side-image').css('display', 'none');
+    $('#side-image').fadeIn(2000);
+    $('.profile-box').css('display', 'none');
+    $('.profile-box').fadeIn(2000);
 
 
     // set up an array of comic images
@@ -45,15 +43,24 @@ $(document).ready(function() {
     console.log(countPagesInIssue(1, 1));
 
     function parseImageURL(url) {
-        var regex = /vol-(\d+)\/issue-(\d+)\/page-(\d+)/;
-        url.replace(regex, function(match, p1, p2, p3) {
-            current_volume = parseInt(p1) - 1;
-            $("#volume_number").html("V." + p2);
-            current_issue = parseInt(p2) - 1;
-            $("#issue_number").html("." + p2);
-            current_page = parseInt(p3) - 1;
-            $("#page_number").html("." + p3);
-        });
+      var loc = new URI(window.location.href);
+      var regex = /vol-(\d+)\/issue-(\d+)\/page-(\d+)/;
+
+      url.replace(regex, function(match, p1, p2, p3) {
+          current_volume = parseInt(p1) - 1;
+          loc.setQuery("volume", p1);
+          $("#volume_number").html("v." + p2 + " " + volume_names[current_volume].toUpperCase());
+
+          current_issue = parseInt(p2) - 1;
+          loc.setQuery("issue", p2);
+          $("#issue_number").html("." + p2 + " " + issue_names[current_volume][current_issue]);
+
+          current_page = parseInt(p3) - 1;
+          $("#page_number").html("p." + p3);
+          loc.setQuery("page", p3);
+          
+          window.history.pushState({path:loc}, "Reality Hackers vol " + p1 +", issue " + p2 + ", p." + p3, loc);
+      });
     }
 
     // define a function that returns the next item in the imgs array,
@@ -88,51 +95,43 @@ $(document).ready(function() {
 
     function updateImage(index) {
         if (current_image == 0) {
-            $("#hide-prev").css('opacity', '0');
-						$("#hide-alpha").css('opacity', '0');
-						$("#hide-prev2").css('opacity', '0');
-						$("#hide-alpha2").css('opacity', '0');
+            $("#hide-prev").hide();
+						$("#hide-alpha").hide();
+						$("#hide-prev2").hide();
+						$("#hide-alpha2").hide();
+
         } else {
-            $("#hide-prev").css('opacity', '1');
-						$("#hide-alpha").css('opacity', '1');
-						$("#hide-prev2").css('opacity', '1');
-						$("#hide-alpha2").css('opacity', '1');
+            $("#hide-prev").show();
+						$("#hide-alpha").show();
+						$("#hide-prev2").show();
+						$("#hide-alpha2").show();
         }
+
         if (current_image == imgs.length - 1) {
-            $("#hide-next").css('opacity', '0');
-						$("#hide-omega").css('opacity', '0');
-						$("#hide-next2").css('opacity', '0');
-						$("#hide-omega2").css('opacity', '0');
+            $("#hide-next").hide();
+						$("#hide-omega").hide();
+						$("#hide-next2").hide();
+						$("#hide-omega2").hide();
+
+
         } else {
-            $("#hide-next").css('opacity', '1');
-						$("#hide-omega").css('opacity', '1');
-						$("#hide-next2").css('opacity', '1');
-						$("#hide-omega2").css('opacity', '1');
+            $("#hide-next").show();
+						$("#hide-omega").show();
+						$("#hide-next2").show();
+						$("#hide-omega2").show();
         }
         var image = imgs[index];
         parseImageURL(image);
         comic.attr('src', image);
+
         $(window).scrollTop(0);
+
     }
 
     var comic = $("#comic");
     // append to DOM
     updateImage(0);
 
-    comic.hammer().bind("swipe", function(e) {
-      switch(e.gesture.direction) {
-        case 2:
-          if (current_image < imgs.length - 1) {
-            next();
-          }
-          break;
-        case 4:
-          if (current_image > 0) {
-            prev();
-          }
-          break;
-        }
-    });
 
     // click the prev button, get the previous image
     $('.prev').on('click', prev);
@@ -188,39 +187,45 @@ $(document).ready(function() {
 
     $("#twit").on({
      "mouseover" : function() {
-        this.src = 'images/twitter-mobile.png';
+        this.src = 'images/twitter-hover.png';
       },
       "mouseout" : function() {
-        this.src='images/twitter-mobile.png';
+        this.src='images/twitter.png';
       }
     });
 
     $("#gram").on({
      "mouseover" : function() {
-        this.src = 'images/instagram-mobile.png';
+        this.src = 'images/instagram-hover.png';
       },
       "mouseout" : function() {
-        this.src='images/instagram-mobile.png';
+        this.src='images/instagram.png';
       }
     });
 
     $("#in").on({
      "mouseover" : function() {
-        this.src = 'images/linkedin-mobile.png';
+        this.src = 'images/linkedin-hover.png';
       },
       "mouseout" : function() {
-        this.src='images/linkedin-mobile.png';
+        this.src='images/linkedin.png';
       }
     });
 
     $("#mail").on({
      "mouseover" : function() {
-        this.src = 'images/email-mobile.png';
+        this.src = 'images/email-hover.png';
       },
       "mouseout" : function() {
-        this.src='images/email-mobile.png';
+        this.src='images/email.png';
       }
     });
 
+    $(function(){
+          $("#scrolling-code").typed({
+            strings: ["This is the text that is being typed"],
+            typeSpeed: 0
+          });
+      });
 
 });
